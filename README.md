@@ -3,6 +3,9 @@
 	<h1 align="center">Godot Box2D - UNMAINTAINED</h1> 
 </p>
 
+## WHAT'S NEW IN THIS FORK
+- Error from creating polygons now printed only in debugs builds, it's inevitable to have invalid shapes inside polygons, so the end user shouldn't be bothered about it.
+
 ## NOTE
 
 Currently focusing more on the [godot rapier physics](https://github.com/appsinacup/godot-rapier-physics) lib. And since this is pretty much identical in functionality with that one, but, at least at the time of writting, the rapier one has:
