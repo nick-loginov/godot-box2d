@@ -1070,7 +1070,7 @@ ShapeHandle box2d::shape_create_convex_polyline(const b2Vec2 *points, size_t poi
 	b2PolygonShape *shape = memnew(b2PolygonShape);
 	shape->Set(points, point_count);
 	if (shape->m_count == 0) {
-		ERR_FAIL_DEBUG_V(invalid_shape_handle());
+		ERR_FAIL_V_DEBUG(invalid_shape_handle());
 	}
 	shapes[0] = shape;
 	return ShapeHandle{
