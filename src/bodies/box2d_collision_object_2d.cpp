@@ -204,7 +204,7 @@ void Box2DCollisionObject2D::_create_shape(Shape &shape, uint32_t p_shape_index)
 	_init_material(mat);
 
 	box2d::ShapeHandle shape_handle = shape.shape->get_box2d_shape();
-	ERR_FAIL_COND(!box2d::is_handle_valid(shape_handle));
+	ERR_FAIL_COND_DEBUG(!box2d::is_handle_valid(shape_handle));
 
 	b2FixtureUserData user_data;
 	set_collider_user_data(user_data, p_shape_index);
@@ -230,7 +230,7 @@ void Box2DCollisionObject2D::_destroy_shape(Shape &shape, uint32_t p_shape_index
 	b2World *space_handle = space->get_handle();
 	ERR_FAIL_COND(!box2d::is_handle_valid(space_handle));
 
-	ERR_FAIL_COND(!box2d::is_handle_valid(shape.collider_handle));
+	ERR_FAIL_COND_DEBUG(!box2d::is_handle_valid(shape.collider_handle));
 
 	if (area_detection_counter > 0) {
 		// Keep track of body information for delayed removal

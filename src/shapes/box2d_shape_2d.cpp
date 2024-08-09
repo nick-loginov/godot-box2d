@@ -22,7 +22,7 @@ box2d::ShapeHandle Box2DShape2D::get_box2d_shape() {
 	if (!box2d::is_handle_valid(shape_handle)) {
 		shape_handle = create_box2d_shape();
 		if (!box2d::is_handle_valid(shape_handle)) {
-			ERR_PRINT("Error creating the shape");
+			ERR_PRINT_DEBUG("Error creating the shape");
 		}
 	}
 
