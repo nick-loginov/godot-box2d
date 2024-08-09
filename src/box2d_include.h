@@ -3,6 +3,7 @@
 
 #include "b2_user_settings.h"
 #include "box2d-wrapper/box2d_wrapper.h"
+#include "error.hpp"
 
 #include <godot_cpp/templates/hashfuncs.hpp>
 #include <godot_cpp/variant/transform2d.hpp>
